@@ -1,0 +1,21 @@
+name: aiffel workflow
+
+on: [push]
+
+jobs:
+  Test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Hello, Aiffel 출력
+      - name: echo Hello Aiffel
+        run: echo Hello, Aiffel
+
+      # README.md 파일 읽기
+      - name: cat README.md
+        run: cat README.md
+
+      # push마다 README.md파일 끝에 문장 추가
+      - name: add README.md
+        run: echo "Push Complete" >> README.md
