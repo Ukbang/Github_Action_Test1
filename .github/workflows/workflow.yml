@@ -1,37 +1,21 @@
 name: aiffel workflow
 
-on: [push]
+on: [push] # push될 때 마다 작동
 
 jobs:
   Test:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 우분투 최신 버전으로 실행
 
     steps:
       # Hello, Aiffel 출력
-      - name: echo Hello Aiffel
+      - name: echo Hello, Aiffel
         run: echo Hello, Aiffel
-      
-      - name: Checkout repository
-        uses: actions/checkout@v4
         
       # 현재 위치 출력
       - name: pwd
-        run: pwd
-        
+        run: pwd   
         
       # 현재 위치의 리스트 출력
       - name: ls
-        run: ls -al
-
-      # README.md 파일 읽기
-      - name: cat README.md
-        run: cat README.md
-
-      # push마다 README.md파일 끝에 문장 추가
-      - name: add README.md
-        run: echo "Push Complete" >> README.md
-
-      # git push
-      - name: git push
-        run: git push
+        run: ls
