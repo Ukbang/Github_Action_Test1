@@ -12,6 +12,14 @@ jobs:
       - name: echo Hello Aiffel
         run: echo Hello, Aiffel
 
+      # 현재 위치 출력
+      - name: pwd
+        run: pwd
+
+      # 현재 위치의 리스트 출력
+      - name: ls
+        run: ls
+
       # README.md 파일 읽기
       - name: cat README.md
         run: cat README.md
