@@ -31,3 +31,7 @@ jobs:
       # push마다 README.md파일 끝에 문장 추가
       - name: add README.md
         run: echo "Push Complete" >> README.md
+
+      # git push
+      - name: git push
+        run: git push
